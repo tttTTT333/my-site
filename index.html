@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>个人主页</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#hobbies">爱好</a></li>
+                <li><a href="#gallery">作品集</a></li>
+                <li><a href="#contact">联系我</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首页横幅 -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>你好，我是<span>旅行者</span></h2>
+            <p>热爱生活，探索世界</p>
+            <a href="#hobbies" class="btn">了解我的爱好</a>
+        </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">关于我</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>我是一个热爱生活的人，喜欢用镜头记录美好瞬间，用音乐感受生活的韵律，用美食品味各地文化。旅行是我最大的爱好，它让我开阔眼界，认识不同的人和事，体验不同的生活方式。</p>
+                    <p>通过摄影，我学会了发现生活中的美；通过音乐，我找到了情感的寄托；通过美食，我了解了不同地域的文化特色。这些爱好让我的生活更加丰富多彩，也让我成为了一个更加全面的人。</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=minimalist%20portrait%20of%20a%20traveler%20with%20camera%2C%20clean%20background%2C%20high%20quality%2C%20professional%20photography&image_size=square_hd" alt="个人照片">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 爱好 -->
+    <section id="hobbies" class="hobbies">
+        <div class="container">
+            <h2 class="section-title">我的爱好</h2>
+            <div class="hobbies-grid">
+                <!-- 旅游 -->
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>旅游</h3>
+                    <p>探索世界各地的风景和文化，感受不同地域的魅力，记录旅途中的美好瞬间。</p>
+                </div>
+                <!-- 摄影 -->
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>摄影</h3>
+                    <p>用镜头捕捉生活中的美好，记录每一个值得珍藏的瞬间，展现世界的多样性。</p>
+                </div>
+                <!-- 音乐 -->
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>音乐</h3>
+                    <p>聆听不同风格的音乐，感受音乐带来的情感共鸣，让生活更加有韵律。</p>
+                </div>
+                <!-- 美食 -->
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>美食</h3>
+                    <p>品尝各地特色美食，了解不同地域的饮食文化，享受美食带来的快乐。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品集 -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">作品集</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=minimalist%20travel%20photography%20of%20mountain%20landscape%2C%20clean%20composition%2C%20high%20quality&image_size=landscape_16_9" alt="旅行照片">
+                    <div class="gallery-overlay">
+                        <h4>山水风景</h4>
+                        <p>自然的壮丽景色</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=minimalist%20street%20photography%2C%20urban%20landscape%2C%20clean%20composition%2C%20high%20quality&image_size=landscape_16_9" alt="城市照片">
+                    <div class="gallery-overlay">
+                        <h4>城市风光</h4>
+                        <p>现代都市的魅力</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=minimalist%20food%20photography%2C%20delicious%20dish%2C%20clean%20background%2C%20high%20quality&image_size=square" alt="美食照片">
+                    <div class="gallery-overlay">
+                        <h4>美食记录</h4>
+                        <p>舌尖上的享受</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=minimalist%20music%20equipment%20photography%2C%20vinyl%20records%2C%20clean%20background%2C%20high%20quality&image_size=square" alt="音乐照片">
+                    <div class="gallery-overlay">
+                        <h4>音乐时光</h4>
+                        <p>旋律中的回忆</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">联系我</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> email@example.com</p>
+                    <p><i class="fas fa-phone"></i> +86 123 4567 8910</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="姓名" required>
+                        <input type="email" placeholder="邮箱" required>
+                        <textarea placeholder="留言" required></textarea>
+                        <button type="submit" class="btn">发送</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 个人主页. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
