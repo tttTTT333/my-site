@@ -939,3 +939,70 @@ body {
         font-size: 1.8rem;
     }
 }
+
+/* 自嘲熊样式 */
+.joke-bear {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.joke-bear-intro {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.joke-bear-intro p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.joke-bear-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.joke-bear-item {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.joke-bear-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.joke-bear-image {
+    margin-bottom: 15px;
+}
+
+.joke-bear-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.joke-bear-caption {
+    font-size: 1rem;
+    color: #555;
+    font-weight: 500;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .joke-bear-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .joke-bear-gallery {
+        grid-template-columns: 1fr;
+    }
+}
