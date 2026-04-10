@@ -302,6 +302,285 @@ body {
     opacity: 0.9;
 }
 
+/* Python课程入口 */
+.python-course {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.course-hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+}
+
+.course-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.course-content h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.course-content p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.course-features {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #666;
+}
+
+.feature i {
+    color: #007bff;
+    font-size: 1.3rem;
+}
+
+.course-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.course-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.course-image img:hover {
+    transform: scale(1.02);
+}
+
+/* Python课程页面样式 */
+.course-intro {
+    padding: 150px 0 100px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    text-align: center;
+}
+
+.course-intro h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.course-intro .subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    margin-bottom: 50px;
+}
+
+.course-stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat i {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.stat .number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.stat .label {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.course-outline {
+    padding: 100px 0;
+    background-color: #f9f9f9;
+}
+
+.chapters {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.chapter {
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.chapter-header {
+    padding: 25px 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.chapter-header:hover {
+    background-color: #f8f9fa;
+}
+
+.chapter-number {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.chapter-info {
+    flex: 1;
+}
+
+.chapter-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.chapter-info p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.chapter-header .fa-chevron-down {
+    color: #007bff;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.chapter-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.chapter-content.active {
+    max-height: 1000px;
+}
+
+.lessons {
+    list-style: none;
+    padding: 0 30px 30px;
+}
+
+.lessons li {
+    padding: 12px 0;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.lessons li:last-child {
+    border-bottom: none;
+}
+
+.lessons .fa-check-circle {
+    color: #28a745;
+}
+
+.lessons .fa-circle {
+    color: #ccc;
+}
+
+.resources {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.resource-card {
+    background-color: #f9f9f9;
+    padding: 40px 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.resource-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+}
+
+.resource-icon i {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.resource-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.resource-card p {
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.btn-small {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-small:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
 /* 联系我 */
 .contact {
     padding: 100px 0;
@@ -469,5 +748,37 @@ body {
 
     .contact-content {
         gap: 30px;
+    }
+
+    .course-hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .course-features {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .course-intro h1 {
+        font-size: 2rem;
+    }
+
+    .course-stats {
+        gap: 30px;
+    }
+
+    .stat .number {
+        font-size: 2rem;
+    }
+
+    .chapter-header {
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+    .chapter-number {
+        width: 100%;
+        text-align: center;
     }
 }

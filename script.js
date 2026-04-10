@@ -52,7 +52,7 @@ const observer = new IntersectionObserver(function(entries) {
 }, observerOptions);
 
 // 观察需要动画的元素
-document.querySelectorAll('.hobby-card, .gallery-item, .about-content').forEach(el => {
+document.querySelectorAll('.hobby-card, .gallery-item, .about-content, .course-hero').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';

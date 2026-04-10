@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python基础课程 - 个人主页</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="index.html" style="text-decoration: none; color: inherit;">个人主页</a></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">首页</a></li>
+                <li><a href="index.html#about">关于我</a></li>
+                <li><a href="index.html#hobbies">爱好</a></li>
+                <li><a href="index.html#gallery">作品集</a></li>
+                <li><a href="python-course.html">Python课程</a></li>
+                <li><a href="index.html#contact">联系我</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 课程介绍区域 -->
+    <section class="course-intro">
+        <div class="container">
+            <h1>Python基础课程</h1>
+            <p class="subtitle">从零开始，掌握Python编程核心技能</p>
+            <div class="course-stats">
+                <div class="stat">
+                    <i class="fas fa-book"></i>
+                    <span class="number">10</span>
+                    <span class="label">章节</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-clock"></i>
+                    <span class="number">20+</span>
+                    <span class="label">小时</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-tasks"></i>
+                    <span class="number">50+</span>
+                    <span class="label">练习</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 课程目录 -->
+    <section class="course-outline">
+        <div class="container">
+            <h2 class="section-title">课程内容</h2>
+            <div class="chapters">
+                <!-- 第一章 -->
+                <div class="chapter">
+                    <div class="chapter-header" onclick="toggleChapter(1)">
+                        <div class="chapter-number">第1章</div>
+                        <div class="chapter-info">
+                            <h3>Python简介与环境搭建</h3>
+                            <p>了解Python语言，安装并配置开发环境</p>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="chapter-content" id="chapter1">
+                        <ul class="lessons">
+                            <li><i class="fas fa-check-circle"></i> 1.1 什么是Python</li>
+                            <li><i class="fas fa-check-circle"></i> 1.2 安装Python</li>
+                            <li><i class="fas fa-check-circle"></i> 1.3 第一个Python程序</li>
+                            <li><i class="fas fa-check-circle"></i> 1.4 使用IDE和编辑器</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 第二章 -->
+                <div class="chapter">
+                    <div class="chapter-header" onclick="toggleChapter(2)">
+                        <div class="chapter-number">第2章</div>
+                        <div class="chapter-info">
+                            <h3>变量与数据类型</h3>
+                            <p>学习Python的基本变量和数据类型</p>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="chapter-content" id="chapter2">
+                        <ul class="lessons">
+                            <li><i class="fas fa-circle"></i> 2.1 变量与赋值</li>
+                            <li><i class="fas fa-circle"></i> 2.2 数字类型</li>
+                            <li><i class="fas fa-circle"></i> 2.3 字符串操作</li>
+                            <li><i class="fas fa-circle"></i> 2.4 布尔值与None</li>
+                            <li><i class="fas fa-circle"></i> 2.5 类型转换</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 第三章 -->
+                <div class="chapter">
+                    <div class="chapter-header" onclick="toggleChapter(3)">
+                        <div class="chapter-number">第3章</div>
+                        <div class="chapter-info">
+                            <h3>运算符与表达式</h3>
+                            <p>掌握Python中的各种运算符</p>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="chapter-content" id="chapter3">
+                        <ul class="lessons">
+                            <li><i class="fas fa-circle"></i> 3.1 算术运算符</li>
+                            <li><i class="fas fa-circle"></i> 3.2 比较运算符</li>
+                            <li><i class="fas fa-circle"></i> 3.3 逻辑运算符</li>
+                            <li><i class="fas fa-circle"></i> 3.4 成员与身份运算符</li>
+                            <li><i class="fas fa-circle"></i> 3.5 运算符优先级</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 第四章 -->
+                <div class="chapter">
+                    <div class="chapter-header" onclick="toggleChapter(4)">
+                        <div class="chapter-number">第4章</div>
+                        <div class="chapter-info">
+                            <h3>控制流程</h3>
+                            <p>学习条件语句和循环结构</p>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="chapter-content" id="chapter4">
+                        <ul class="lessons">
+                            <li><i class="fas fa-circle"></i> 4.1 if条件语句</li>
+                            <li><i class="fas fa-circle"></i> 4.2 for循环</li>
+                            <li><i class="fas fa-circle"></i> 4.3 while循环</li>
+                            <li><i class="fas fa-circle"></i> 4.4 break和continue</li>
+                            <li><i class="fas fa-circle"></i> 4.5 循环嵌套</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 第五章 -->
+                <div class="chapter">
+                    <div class="chapter-header" onclick="toggleChapter(5)">
+                        <div class="chapter-number">第5章</div>
+                        <div class="chapter-info">
+                            <h3>列表与元组</h3>
+                            <p>掌握Python中的序列数据结构</p>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="chapter-content" id="chapter5">
+                        <ul class="lessons">
+                            <li><i class="fas fa-circle"></i> 5.1 列表基础</li>
+                            <li><i class="fas fa-circle"></i> 5.2 列表操作</li>
+                            <li><i class="fas fa-circle"></i> 5.3 列表方法</li>
+                            <li><i class="fas fa-circle"></i> 5.4 元组</li>
+                            <li><i class="fas fa-circle"></i> 5.5 列表推导式</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 第六章 -->
+                <div class="chapter">
+                    <div class="chapter-header" onclick="toggleChapter(6)">
+                        <div class="chapter-number">第6章</div>
+                        <div class="chapter-info">
+                            <h3>字典与集合</h3>
+                            <p>学习键值对和集合数据结构</p>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="chapter-content" id="chapter6">
+                        <ul class="lessons">
+                            <li><i class="fas fa-circle"></i> 6.1 字典基础</li>
+                            <li><i class="fas fa-circle"></i> 6.2 字典操作</li>
+                            <li><i class="fas fa-circle"></i> 6.3 集合</li>
+                            <li><i class="fas fa-circle"></i> 6.4 集合操作</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 第七章 -->
+                <div class="chapter">
+                    <div class="chapter-header" onclick="toggleChapter(7)">
+                        <div class="chapter-number">第7章</div>
+                        <div class="chapter-info">
+                            <h3>函数</h3>
+                            <p>学习如何定义和使用函数</p>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="chapter-content" id="chapter7">
+                        <ul class="lessons">
+                            <li><i class="fas fa-circle"></i> 7.1 函数定义与调用</li>
+                            <li><i class="fas fa-circle"></i> 7.2 参数传递</li>
+                            <li><i class="fas fa-circle"></i> 7.3 返回值</li>
+                            <li><i class="fas fa-circle"></i> 7.4 作用域</li>
+                            <li><i class="fas fa-circle"></i> 7.5 匿名函数与lambda</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 第八章 -->
+                <div class="chapter">
+                    <div class="chapter-header" onclick="toggleChapter(8)">
+                        <div class="chapter-number">第8章</div>
+                        <div class="chapter-info">
+                            <h3>模块与包</h3>
+                            <p>了解Python的模块化编程</p>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="chapter-content" id="chapter8">
+                        <ul class="lessons">
+                            <li><i class="fas fa-circle"></i> 8.1 导入模块</li>
+                            <li><i class="fas fa-circle"></i> 8.2 创建模块</li>
+                            <li><i class="fas fa-circle"></i> 8.3 常用标准库</li>
+                            <li><i class="fas fa-circle"></i> 8.4 包的概念</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 第九章 -->
+                <div class="chapter">
+                    <div class="chapter-header" onclick="toggleChapter(9)">
+                        <div class="chapter-number">第9章</div>
+                        <div class="chapter-info">
+                            <h3>文件操作</h3>
+                            <p>学习读写文件的基本操作</p>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="chapter-content" id="chapter9">
+                        <ul class="lessons">
+                            <li><i class="fas fa-circle"></i> 9.1 打开与关闭文件</li>
+                            <li><i class="fas fa-circle"></i> 9.2 读取文件</li>
+                            <li><i class="fas fa-circle"></i> 9.3 写入文件</li>
+                            <li><i class="fas fa-circle"></i> 9.4 处理CSV文件</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 第十章 -->
+                <div class="chapter">
+                    <div class="chapter-header" onclick="toggleChapter(10)">
+                        <div class="chapter-number">第10章</div>
+                        <div class="chapter-info">
+                            <h3>实战项目</h3>
+                            <p>综合应用所学知识完成项目</p>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="chapter-content" id="chapter10">
+                        <ul class="lessons">
+                            <li><i class="fas fa-circle"></i> 10.1 项目一：猜数字游戏</li>
+                            <li><i class="fas fa-circle"></i> 10.2 项目二：待办事项列表</li>
+                            <li><i class="fas fa-circle"></i> 10.3 项目三：学生成绩管理</li>
+                            <li><i class="fas fa-circle"></i> 10.4 项目四：简单计算器</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 学习资源 -->
+    <section class="resources">
+        <div class="container">
+            <h2 class="section-title">学习资源</h2>
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>在线编辑器</h3>
+                    <p>无需安装，直接在浏览器中编写和运行Python代码</p>
+                    <a href="#" class="btn-small">打开</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-download"></i>
+                    </div>
+                    <h3>代码下载</h3>
+                    <p>下载所有章节的示例代码和练习答案</p>
+                    <a href="#" class="btn-small">下载</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>常见问题</h3>
+                    <p>学习过程中常见问题的解答和技巧</p>
+                    <a href="#" class="btn-small">查看</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 个人主页. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function toggleChapter(num) {
+            const content = document.getElementById('chapter' + num);
+            const header = content.previousElementSibling;
+            const icon = header.querySelector('.fa-chevron-down');
+            
+            content.classList.toggle('active');
+            icon.style.transform = content.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0)';
+        }
+    </script>
+</body>
+</html>
