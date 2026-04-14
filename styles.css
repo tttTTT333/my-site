@@ -788,6 +788,232 @@ body {
     }
 }
 
+/* 核心理念样式 */
+.philosophy {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.philosophy-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.philosophy-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.philosophy-text p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.philosophy-icon {
+    flex: 0 0 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.philosophy-icon i {
+    font-size: 5rem;
+    color: #007bff;
+}
+
+/* 阶段样式 */
+.phase-section {
+    padding: 100px 0;
+    background-color: #f9f9f9;
+}
+
+.phase-section.phase-alt {
+    background-color: #fff;
+}
+
+.phase-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+.phase-time,
+.phase-goal {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+    padding: 15px 30px;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.phase-alt .phase-time,
+.phase-alt .phase-goal {
+    background-color: #f9f9f9;
+}
+
+.phase-time i,
+.phase-goal i {
+    color: #007bff;
+}
+
+.phase-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.phase-module {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.phase-alt .phase-module {
+    background-color: #f9f9f9;
+}
+
+.phase-module h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.phase-module h3 i {
+    color: #007bff;
+}
+
+.phase-module p {
+    font-size: 1.05rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.phase-module ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.phase-module li {
+    padding: 10px 0;
+    color: #555;
+    line-height: 1.7;
+}
+
+.phase-module li strong {
+    color: #333;
+}
+
+/* 学习策略样式 */
+.strategies-section {
+    padding: 100px 0;
+    background-color: #f9f9f9;
+}
+
+.strategies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.strategy-card {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.strategy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.strategy-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.strategy-icon i {
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.strategy-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.strategy-card p {
+    font-size: 1.05rem;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.strategy-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.strategy-card li {
+    padding: 8px 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+.strategy-card li strong {
+    color: #333;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .philosophy-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .philosophy-icon {
+        order: -1;
+    }
+
+    .phase-meta {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .phase-time,
+    .phase-goal {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .strategies-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* 兴趣爱好页面样式 */
 .hobbies-hero {
     height: 70vh;

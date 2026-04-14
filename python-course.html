@@ -17,10 +17,11 @@
             <ul class="nav-links">
                 <li><a href="index.html">个人主页</a></li>
                 <li><a href="python-course.html">课程首页</a></li>
-                <li><a href="#intro">课程介绍</a></li>
-                <li><a href="#outline">课程大纲</a></li>
-                <li><a href="#resources">学习资源</a></li>
-                <li><a href="#contact">联系我们</a></li>
+                <li><a href="#intro">核心理念</a></li>
+                <li><a href="#phase1">第一阶段</a></li>
+                <li><a href="#phase2">第二阶段</a></li>
+                <li><a href="#phase3">第三阶段</a></li>
+                <li><a href="#strategies">学习策略</a></li>
             </ul>
             <div class="menu-toggle">
                 <i class="fas fa-bars"></i>
@@ -32,174 +33,190 @@
     <section id="intro" class="course-intro">
         <div class="container">
             <h1>Python基础课程</h1>
-            <p class="subtitle">掌握Python编程核心基础</p>
+            <p class="subtitle">在AI时代，学习编程的新方式</p>
             <div class="course-stats">
                 <div class="stat">
-                    <i class="fas fa-book"></i>
-                    <span class="number">4</span>
-                    <span class="label">章节</span>
+                    <i class="fas fa-calendar-alt"></i>
+                    <span class="number">6-8</span>
+                    <span class="label">周</span>
                 </div>
                 <div class="stat">
                     <i class="fas fa-clock"></i>
-                    <span class="number">8+</span>
-                    <span class="label">小时</span>
+                    <span class="number">3</span>
+                    <span class="label">阶段</span>
                 </div>
                 <div class="stat">
-                    <i class="fas fa-tasks"></i>
-                    <span class="number">20+</span>
-                    <span class="label">练习</span>
+                    <i class="fas fa-robot"></i>
+                    <span class="number">AI</span>
+                    <span class="label">辅助</span>
                 </div>
             </div>
-            <a href="#outline" class="btn">开始学习</a>
+            <a href="#phase1" class="btn">开始学习</a>
         </div>
     </section>
 
-    <!-- 课程目录 -->
-    <section id="outline" class="course-outline">
+    <!-- 核心理念 -->
+    <section class="philosophy">
         <div class="container">
-            <h2 class="section-title">课程内容</h2>
-            <div class="chapters">
-                <!-- 第一章 -->
-                <div class="chapter">
-                    <div class="chapter-header" onclick="toggleChapter(1)">
-                        <div class="chapter-number">第1章</div>
-                        <div class="chapter-info">
-                            <h3>Python简介与环境搭建</h3>
-                            <p>了解Python语言，安装并配置开发环境</p>
-                        </div>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="chapter-content" id="chapter1">
-                        <ul class="lessons">
-                            <li><i class="fas fa-check-circle"></i> 1.1 什么是Python</li>
-                            <li><i class="fas fa-check-circle"></i> 1.2 安装Python</li>
-                            <li><i class="fas fa-check-circle"></i> 1.3 第一个Python程序</li>
-                            <li><i class="fas fa-check-circle"></i> 1.4 使用IDE和编辑器</li>
-                        </ul>
-                    </div>
+            <h2 class="section-title">核心理念</h2>
+            <div class="philosophy-content">
+                <div class="philosophy-text">
+                    <p>在AI辅助编程（如Copilot、Cursor）成熟的今天，学习的重点应从记忆语法细节转向理解编程逻辑、掌握问题拆解方法，并学会如何高效指挥AI工具。</p>
+                    <p>你的目标是获得"驾驶执照"，知道目的地（问题）和路线（逻辑），并能利用"副驾驶"（AI）提升效率，而非自己从头造车。</p>
                 </div>
-
-                <!-- 第二章 -->
-                <div class="chapter">
-                    <div class="chapter-header" onclick="toggleChapter(2)">
-                        <div class="chapter-number">第2章</div>
-                        <div class="chapter-info">
-                            <h3>变量与数据类型</h3>
-                            <p>学习Python的基本变量和数据类型</p>
-                        </div>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="chapter-content" id="chapter2">
-                        <ul class="lessons">
-                            <li><i class="fas fa-circle"></i> 2.1 变量与赋值</li>
-                            <li><i class="fas fa-circle"></i> 2.2 数字类型</li>
-                            <li><i class="fas fa-circle"></i> 2.3 字符串操作</li>
-                            <li><i class="fas fa-circle"></i> 2.4 布尔值与None</li>
-                            <li><i class="fas fa-circle"></i> 2.5 类型转换</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- 第三章 -->
-                <div class="chapter">
-                    <div class="chapter-header" onclick="toggleChapter(3)">
-                        <div class="chapter-number">第3章</div>
-                        <div class="chapter-info">
-                            <h3>运算符与表达式</h3>
-                            <p>掌握Python中的各种运算符</p>
-                        </div>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="chapter-content" id="chapter3">
-                        <ul class="lessons">
-                            <li><i class="fas fa-circle"></i> 3.1 算术运算符</li>
-                            <li><i class="fas fa-circle"></i> 3.2 比较运算符</li>
-                            <li><i class="fas fa-circle"></i> 3.3 逻辑运算符</li>
-                            <li><i class="fas fa-circle"></i> 3.4 成员与身份运算符</li>
-                            <li><i class="fas fa-circle"></i> 3.5 运算符优先级</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- 第四章 -->
-                <div class="chapter">
-                    <div class="chapter-header" onclick="toggleChapter(4)">
-                        <div class="chapter-number">第4章</div>
-                        <div class="chapter-info">
-                            <h3>控制流程</h3>
-                            <p>学习条件语句和循环结构</p>
-                        </div>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="chapter-content" id="chapter4">
-                        <ul class="lessons">
-                            <li><i class="fas fa-circle"></i> 4.1 if条件语句</li>
-                            <li><i class="fas fa-circle"></i> 4.2 for循环</li>
-                            <li><i class="fas fa-circle"></i> 4.3 while循环</li>
-                            <li><i class="fas fa-circle"></i> 4.4 break和continue</li>
-                            <li><i class="fas fa-circle"></i> 4.5 循环嵌套</li>
-                        </ul>
-                    </div>
+                <div class="philosophy-icon">
+                    <i class="fas fa-steering-wheel"></i>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 学习资源 -->
-    <section id="resources" class="resources">
+    <!-- 第一阶段 -->
+    <section id="phase1" class="phase-section">
         <div class="container">
-            <h2 class="section-title">学习资源</h2>
-            <div class="resource-grid">
-                <div class="resource-card">
-                    <div class="resource-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>在线编辑器</h3>
-                    <p>无需安装，直接在浏览器中编写和运行Python代码</p>
-                    <a href="#" class="btn-small">打开</a>
+            <h2 class="section-title">第一阶段：语法基石与工具上手</h2>
+            <div class="phase-meta">
+                <span class="phase-time"><i class="fas fa-calendar"></i> 第1-2周</span>
+                <span class="phase-goal"><i class="fas fa-bullseye"></i> 能看懂和编写简单的脚本，理解程序运行的基本逻辑，并建立现代开发环境</span>
+            </div>
+            
+            <div class="phase-content">
+                <div class="phase-module">
+                    <h3><i class="fas fa-laptop-code"></i> 开发环境搭建</h3>
+                    <p>这是高效起步的第一步。访问Python官网下载并安装最新稳定版，安装时务必勾选"Add Python to PATH"。编辑器强烈推荐VS Code，它功能强大且免费，并安装Python插件和GitHub Copilot等AI辅助编程工具以体验现代工作流。从一开始就养成使用虚拟环境（venv）管理项目依赖的好习惯，这能避免未来包管理的混乱。</p>
                 </div>
-                <div class="resource-card">
-                    <div class="resource-icon">
-                        <i class="fas fa-file-download"></i>
-                    </div>
-                    <h3>代码下载</h3>
-                    <p>下载所有章节的示例代码和练习答案</p>
-                    <a href="#" class="btn-small">下载</a>
+
+                <div class="phase-module">
+                    <h3><i class="fas fa-cube"></i> 绝对核心语法</h3>
+                    <p>此阶段无需面面俱到，必须牢固掌握以下内容：</p>
+                    <ul>
+                        <li><strong>变量与数据类型：</strong>理解int（整数）、float（浮点数）、str（字符串）、bool（布尔值）的区别与转换。</li>
+                        <li><strong>核心数据结构：</strong>重点攻克列表（list）和字典（dict）。它们是处理表格数据（行、列）和键值对信息（如用户ID对应属性）的基石。元组（tuple）和集合（set）了解概念即可。</li>
+                        <li><strong>程序控制流：</strong>熟练掌握if-elif-else条件判断和for循环。while循环了解其概念。</li>
+                        <li><strong>函数：</strong>学会定义函数、传递参数、使用返回值。这是实现代码复用和模块化的关键。</li>
+                    </ul>
                 </div>
-                <div class="resource-card">
-                    <div class="resource-icon">
-                        <i class="fas fa-question-circle"></i>
-                    </div>
-                    <h3>常见问题</h3>
-                    <p>学习过程中常见问题的解答和技巧</p>
-                    <a href="#" class="btn-small">查看</a>
+
+                <div class="phase-module">
+                    <h3><i class="fas fa-hands-helping"></i> 立即实践</h3>
+                    <p>学习编程最忌"只看不练"。应立刻动手，尝试编写如"命令行计算器"或"猜数字游戏"等小项目。在此过程中，积极使用AI编程助手帮你补全代码或解释错误，亲身感受"人机协同"的高效工作流。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 联系我们 -->
-    <section id="contact" class="contact">
+    <!-- 第二阶段 -->
+    <section id="phase2" class="phase-section phase-alt">
         <div class="container">
-            <h2 class="section-title">联系我们</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <p><i class="fas fa-envelope"></i> email@example.com</p>
-                    <p><i class="fas fa-phone"></i> +86 123 4567 8910</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-weixin"></i></a>
-                        <a href="#"><i class="fab fa-weibo"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                    </div>
+            <h2 class="section-title">第二阶段：数据处理专项与AI接口初探</h2>
+            <div class="phase-meta">
+                <span class="phase-time"><i class="fas fa-calendar"></i> 第3-4周</span>
+                <span class="phase-goal"><i class="fas fa-bullseye"></i> 能够处理实际业务数据文件，并初步学会调用AI模型API，让所学"活"起来</span>
+            </div>
+            
+            <div class="phase-content">
+                <div class="phase-module">
+                    <h3><i class="fas fa-file-alt"></i> 文件操作</h3>
+                    <p>学习使用with open()语句安全地读写文本文件（.txt）和CSV文件（.csv）。这是你从外部获取数据（如导出的销售报表）的第一步，也是自动化处理的基础。</p>
                 </div>
-                <div class="contact-form">
-                    <form>
-                        <input type="text" placeholder="姓名" required>
-                        <input type="email" placeholder="邮箱" required>
-                        <textarea placeholder="留言" required></textarea>
-                        <button type="submit" class="btn">发送</button>
-                    </form>
+
+                <div class="phase-module">
+                    <h3><i class="fas fa-shield-alt"></i> 异常处理</h3>
+                    <p>学习try-except结构，让你的程序在遇到错误（如文件不存在、数据格式错误）时不会崩溃，并能给出友好提示。这是编写健壮、实用脚本的必备技能。</p>
+                </div>
+
+                <div class="phase-module">
+                    <h3><i class="fas fa-object-group"></i> 面向对象编程（OOP）基础</h3>
+                    <p>无需深究复杂理论。重点理解类（Class）和对象（Object）的概念，了解__init__方法（初始化）和如何使用属性。目的是能看懂和使用他人编写的优秀库（如Pandas的DataFrame就是一个类），而非自己设计复杂系统。</p>
+                </div>
+
+                <div class="phase-module">
+                    <h3><i class="fas fa-robot"></i> AI编程初体验（时代关键技能）</h3>
+                    <p>这是将你的Python技能与最前沿应用连接起来的一步。在理解几个核心概念后，动手调用一个API：</p>
+                    <ul>
+                        <li><strong>核心概念：</strong>理解API（程序间交互的桥梁）、Prompt（提示词，决定AI输出质量的关键）和Token（计费与长度单位）。</li>
+                        <li><strong>第一个AI程序：</strong>按照教程，注册DeepSeek等提供免费额度的平台，获取API Key，成功运行一个向AI发送问候并获取回复的脚本。这个过程会让你深刻理解现代AI应用是如何构建的，并立即获得成就感。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第三阶段 -->
+    <section id="phase3" class="phase-section">
+        <div class="container">
+            <h2 class="section-title">第三阶段：项目整合与方向初探</h2>
+            <div class="phase-meta">
+                <span class="phase-time"><i class="fas fa-calendar"></i> 第5-6周</span>
+                <span class="phase-goal"><i class="fas fa-bullseye"></i> 能阅读和理解稍复杂的代码，完成一个结合数据处理的小型综合项目，并对未来方向有初步认知</span>
+            </div>
+            
+            <div class="phase-content">
+                <div class="phase-module">
+                    <h3><i class="fas fa-cubes"></i> 模块与包管理</h3>
+                    <p>学习如何使用import导入标准库（如os处理文件路径、json处理JSON数据）和第三方库（如pandas）。理解pip如何安装和管理库，这是使用强大生态系统的钥匙。</p>
+                </div>
+
+                <div class="phase-module">
+                    <h3><i class="fas fa-project-diagram"></i> 小型综合项目：销售数据简报生成器</h3>
+                    <p>将前几周所学串联起来：</p>
+                    <ul>
+                        <li>用open或pandas读取一个CSV格式的销售数据文件。</li>
+                        <li>用for循环和if判断计算基本指标（如总销售额、TOP3商品）。</li>
+                        <li>定义一个函数来格式化输出报告。</li>
+                        <li>关键一步：尝试将计算出的摘要，通过之前学的API调用，发送给AI模型，让它帮你生成一段文字分析报告。</li>
+                        <li>用try-except处理可能出现的文件读取错误。</li>
+                    </ul>
+                </div>
+
+                <div class="phase-module">
+                    <h3><i class="fas fa-compass"></i> 方向认知</h3>
+                    <p>在基础牢固后，可以快速浏览Python的主要应用领域，如数据分析（Pandas, Matplotlib）、Web开发（Django, Flask）或人工智能（Scikit-learn）。这有助于你结合自身专业（如商务数据分析）规划后续学习，但在此阶段无需深入。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 学习策略 -->
+    <section id="strategies" class="strategies-section">
+        <div class="container">
+            <h2 class="section-title">高效学习策略与资源推荐</h2>
+            
+            <div class="strategies-grid">
+                <div class="strategy-card">
+                    <div class="strategy-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>明确目标，任务驱动</h3>
+                    <p>始终以"我要用Python解决某个具体问题"为目标学习，例如"自动汇总每周的社团报名表"。避免陷入单纯语法学习的枯燥。</p>
+                </div>
+
+                <div class="strategy-card">
+                    <div class="strategy-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>善用最佳资源</h3>
+                    <ul>
+                        <li><strong>交互式教程：</strong>Codecademy的Python课程或freeCodeCamp的教程，适合边学边练，获得即时反馈。</li>
+                        <li><strong>中文经典：</strong>廖雪峰的Python教程或菜鸟教程（Runoob），讲解系统，适合查阅和系统学习。</li>
+                        <li><strong>书籍：</strong>《Python编程：从入门到实践》是零基础经典，项目导向，广受推荐。</li>
+                    </ul>
+                </div>
+
+                <div class="strategy-card">
+                    <div class="strategy-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>拥抱AI，转变角色</h3>
+                    <p>将AI编程助手视为你的"副驾驶"。你的核心价值在于准确描述问题（Prompt）、判断代码逻辑是否正确、以及将代码片段整合成可用的解决方案。学会向AI提问："如何用Pandas读取CSV文件并计算第二列的总和？"</p>
+                </div>
+
+                <div class="strategy-card">
+                    <div class="strategy-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>加入社区</h3>
+                    <p>遇到问题，优先在Stack Overflow或GitHub上搜索，绝大多数常见错误都有解答。参与社区能帮你保持学习动力。</p>
                 </div>
             </div>
         </div>
@@ -213,15 +230,5 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        function toggleChapter(num) {
-            const content = document.getElementById('chapter' + num);
-            const header = content.previousElementSibling;
-            const icon = header.querySelector('.fa-chevron-down');
-            
-            content.classList.toggle('active');
-            icon.style.transform = content.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0)';
-        }
-    </script>
 </body>
 </html>
