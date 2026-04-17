@@ -246,6 +246,7 @@ print(f'x + y = {x + y}')
             <div class="code-controls">
                 <button class="btn" onclick="runCode()"><i class="fas fa-play"></i> 运行代码</button>
                 <button class="btn btn-secondary" onclick="clearOutput()"><i class="fas fa-trash"></i> 清空输出</button>
+                <button class="btn btn-secondary" onclick="resetCode()"><i class="fas fa-redo"></i> 重置代码</button>
             </div>
             <div class="code-output">
                 <h4>输出:</h4>
@@ -347,6 +348,18 @@ print(f'x + y = {x + y}')
         // 清空输出
         function clearOutput() {
             document.getElementById('codeOutput').innerHTML = '';
+        }
+
+        // 重置代码
+        function resetCode() {
+            const defaultCode = `# 在这里编写Python代码
+print('Hello, Python!')
+x = 10
+y = 20
+print(f'x + y = {x + y}')
+`;
+            editor.setValue(defaultCode);
+            clearOutput();
         }
 
         // 可拖拽功能
