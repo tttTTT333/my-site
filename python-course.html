@@ -6,6 +6,10 @@
     <title>Python基础课程 - 学习站点</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/addon/edit/matchbrackets.min.js"></script>
 </head>
 <body>
     <!-- 导航栏 -->
@@ -222,6 +226,34 @@
         </div>
     </section>
 
+    <!-- 代码运行器 -->
+    <div class="code-runner" id="codeRunner">
+        <div class="code-runner-header" onclick="toggleCodeRunner()">
+            <h3><i class="fas fa-code"></i> 代码运行器</h3>
+            <button class="code-runner-toggle" id="codeRunnerToggle">
+                <i class="fas fa-chevron-up"></i>
+            </button>
+        </div>
+        <div class="code-runner-content" id="codeRunnerContent">
+            <div class="code-editor-container">
+                <textarea id="codeEditor"># 在这里编写Python代码
+print('Hello, Python!')
+x = 10
+y = 20
+print(f'x + y = {x + y}')
+</textarea>
+            </div>
+            <div class="code-controls">
+                <button class="btn" onclick="runCode()"><i class="fas fa-play"></i> 运行代码</button>
+                <button class="btn btn-secondary" onclick="clearOutput()"><i class="fas fa-trash"></i> 清空输出</button>
+            </div>
+            <div class="code-output">
+                <h4>输出:</h4>
+                <div id="codeOutput" class="output-content"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- 页脚 -->
     <footer class="footer">
         <div class="container">
@@ -230,5 +262,114 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // 初始化代码编辑器
+        let editor = CodeMirror.fromTextArea(document.getElementById('codeEditor'), {
+            mode: 'python',
+            lineNumbers: true,
+            matchBrackets: true,
+            theme: 'default',
+            indentUnit: 4,
+            tabSize: 4,
+            indentWithTabs: false
+        });
+
+        // 代码运行器状态
+        let codeRunnerVisible = true;
+
+        // 切换代码运行器显示/隐藏
+        function toggleCodeRunner() {
+            const content = document.getElementById('codeRunnerContent');
+            const toggleIcon = document.querySelector('#codeRunnerToggle i');
+            
+            codeRunnerVisible = !codeRunnerVisible;
+            
+            if (codeRunnerVisible) {
+                content.style.display = 'block';
+                toggleIcon.className = 'fas fa-chevron-up';
+            } else {
+                content.style.display = 'none';
+                toggleIcon.className = 'fas fa-chevron-down';
+            }
+        }
+
+        // 运行代码
+        function runCode() {
+            const code = editor.getValue();
+            const output = document.getElementById('codeOutput');
+            
+            output.innerHTML = '<div class="loading">运行中...</div>';
+            
+            // 模拟代码执行
+            setTimeout(() => {
+                try {
+                    // 简单的Python代码执行模拟
+                    let result = '';
+                    
+                    // 模拟Python解释器
+                    if (code.includes('print')) {
+                        // 提取print语句
+                        const printMatches = code.match(/print\((.*?)\)/g);
+                        if (printMatches) {
+                            printMatches.forEach(printStmt => {
+                                // 简单处理字符串和表达式
+                                let content = printStmt.replace(/print\((.*?)\)/, '$1');
+                                content = content.replace(/['"]/g, '');
+                                
+                                // 处理简单表达式
+                                if (content.includes('{') && content.includes('}')) {
+                                    // 简单的f-string处理
+                                    const expr = content.match(/\{([^}]+)\}/)[1];
+                                    try {
+                                        const value = eval(expr);
+                                        content = content.replace(/\{[^}]+\}/, value);
+                                    } catch (e) {
+                                        content = content.replace(/\{[^}]+\}/, '[表达式]');
+                                    }
+                                }
+                                
+                                result += content + '\n';
+                            });
+                        }
+                    }
+                    
+                    if (result) {
+                        output.innerHTML = '<pre>' + result + '</pre>';
+                    } else {
+                        output.innerHTML = '<pre>代码执行完成，无输出</pre>';
+                    }
+                } catch (error) {
+                    output.innerHTML = '<pre class="error">错误: ' + error.message + '</pre>';
+                }
+            }, 500);
+        }
+
+        // 清空输出
+        function clearOutput() {
+            document.getElementById('codeOutput').innerHTML = '';
+        }
+
+        // 可拖拽功能
+        const codeRunner = document.getElementById('codeRunner');
+        let isDragging = false;
+        let offsetX, offsetY;
+
+        codeRunner.querySelector('.code-runner-header').addEventListener('mousedown', function(e) {
+            isDragging = true;
+            offsetX = e.clientX - codeRunner.getBoundingClientRect().left;
+            offsetY = e.clientY - codeRunner.getBoundingClientRect().top;
+        });
+
+        document.addEventListener('mousemove', function(e) {
+            if (isDragging) {
+                codeRunner.style.left = (e.clientX - offsetX) + 'px';
+                codeRunner.style.top = (e.clientY - offsetY) + 'px';
+            }
+        });
+
+        document.addEventListener('mouseup', function() {
+            isDragging = false;
+        });
+    </script>
 </body>
 </html>

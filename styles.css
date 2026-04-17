@@ -1014,6 +1014,142 @@ body {
     }
 }
 
+/* 代码运行器样式 */
+.code-runner {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 600px;
+    max-width: 90vw;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.code-runner-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: move;
+    user-select: none;
+}
+
+.code-runner-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.code-runner-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.code-runner-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.code-runner-content {
+    padding: 20px;
+}
+
+.code-editor-container {
+    margin-bottom: 15px;
+}
+
+.CodeMirror {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 200px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+}
+
+.code-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.code-output {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.code-output h4 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.output-content {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    min-height: 100px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    white-space: pre-wrap;
+}
+
+.output-content pre {
+    margin: 0;
+}
+
+.output-content .error {
+    color: #dc3545;
+}
+
+.output-content .loading {
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .code-runner {
+        width: 95vw;
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .CodeMirror {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .code-controls {
+        flex-direction: column;
+    }
+
+    .code-controls .btn {
+        width: 100%;
+    }
+}
+
 /* 兴趣爱好页面样式 */
 .hobbies-hero {
     height: 70vh;
